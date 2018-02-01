@@ -1,0 +1,26 @@
+{
+    "name": "edusacra/calculadora_imc",
+    "description": "Construção de uma aplicação para realizar o cálculo de IMC.",
+    "type": "project",
+    "require": {
+        "php": "7.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+     },
+     "autoload-dev": {
+        "psr-0": {"Tests": "src/"}
+     },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "authors": [
+        {
+            "name": "Eduardo Sacramento",
+            "email": "eduardo.sacramento@neomove.com.br"
+        }
+    ]
+}
