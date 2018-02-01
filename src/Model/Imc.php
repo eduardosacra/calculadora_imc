@@ -10,7 +10,7 @@ class Imc {
      * @param float $peso 64 Kg unidade Kilograma
      * @return float 21.9
      */
-    public function calculaImc(float $altura, float $peso)
+    public function calculaImc(float $altura, float $peso): float
     {
         if($altura == 0){
             return 0;
@@ -23,7 +23,12 @@ class Imc {
         return  $result;
     }
 
-    public function calculaImcText(float $altura, float $peso)
+    /**
+     * @param float $altura
+     * @param float $peso
+     * @return string
+     */
+    public function calculaImcText(float $altura, float $peso): string
     {
         $imc = $this->calculaImc($altura, $peso);
 
@@ -32,10 +37,18 @@ class Imc {
         return $result;
     }
 
-    private function avaliaImc($imc)
+    /**
+     * @param $imc
+     * @return string
+     */
+    private function avaliaImc($imc): string
     {
         $mensagem = "";
-        if ($imc< 17){
+        if ($imc == 0  ) {
+
+            $mensagem = "Informe sua Altura e Peso";
+
+        } elseif ($imc< 17){
 
             $mensagem = "Muito abaixo do peso";
 

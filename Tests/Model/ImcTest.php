@@ -49,5 +49,8 @@ class ImcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Obesidade I', $imc->calculaImcText(1.60, 85));
         $this->assertEquals('Obesidade II (severa)', $imc->calculaImcText(1.85, 129));
         $this->assertEquals('Obesidade III (mórbida)', $imc->calculaImcText(1.40, 85));
+        $this->assertEquals('Informe sua Altura e Peso', $imc->calculaImcText(1.40, 0));
+        $this->assertEquals('Informe sua Altura e Peso', $imc->calculaImcText(0, 10));
+        $this->assertEquals('Informe sua Altura e Peso', $imc->calculaImcText(0, 0));
     }
 }
